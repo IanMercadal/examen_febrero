@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Gate;
 use App\Http\Requests\StoreRequest;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -52,7 +53,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        
     }
 
     /**
@@ -63,7 +64,10 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        if (!Gate::allows('edit', $post)) {
+            abort(403);
+        }
+        return view('posts.edit',compact('post'));
     }
 
     /**

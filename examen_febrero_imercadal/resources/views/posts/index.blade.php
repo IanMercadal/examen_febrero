@@ -14,6 +14,7 @@
                 <th scope="col">Fecha</th>
                 <th>
                     <button class="btn btn-primary"><a class="text-white" href="{{route('posts.create')}}">@lang('Create')</a></button>
+                    
                 </th>      
             </tr>
         </thead>
@@ -22,10 +23,11 @@
             @foreach($posts as $post)
             <tr class="text-center">
                 <td>{{ $post->id}}</td>
-                <td> <img width="100px" src="{{Storage::url($post->avatar)}}" alt=""></td>
-                <td>{{ $post->name}}</td>
-                <td>{{ $post->fundado}}</td>
+                <td>{{ $post->titulo}}</td>
+                <td>{{ $post->extracto}}</td>
+                <td><button class="btn btn-primary"><a class="text-white" href="{{route('posts.edit', $post->id)}}">@lang('Edit')</a></button></td>
             </tr>
+            
             @endforeach
         </tbody>
     </table>
