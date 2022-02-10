@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 
-@section('title','Create')
+@section('title','Crear')
   
 @section('content')
 <h2 class="text-center">Crear post</h2>
