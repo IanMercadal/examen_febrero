@@ -8,6 +8,7 @@
     <form class="form border border-secondary text-start bg-light m-2 w-75" action="{{route('posts.store', $post)}}" method="post">
         @csrf
 
+         
         <div class="form-group m-2">
             <label>Título<input class="form-control" type="text" name="titulo" value="titulo" required></label>
         </div>
@@ -33,7 +34,6 @@
             <label>Comentable</label>
             <input type="checkbox" name="comentable">
         </div>
-
 
         <select id="acceso" name="acceso">
             <option value="publico">Publico</option>
