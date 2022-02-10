@@ -2,16 +2,10 @@
 
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Http\Controllers\LanguageController;
+
+Route::get('view', [LanguageController::class, 'view'])->name('view');
+Route::get('language-change', [LanguageController::class, 'changeLanguage'])->name('changeLanguage');
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,5 +16,10 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::resource('/posts', PostController::class)->middleware(['auth']);
+
+//Si la ruta no existe puedo indicar qué vista mostrar
+Route::fallback(function(){
+    return view('/posts.create');
+});
 
 require __DIR__.'/auth.php';

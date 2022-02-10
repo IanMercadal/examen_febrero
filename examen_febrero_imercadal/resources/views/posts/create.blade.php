@@ -20,7 +20,7 @@
         <div class="form-group m-2">
             <label>@lang('Titulo')<br> <input class="form-control" type="text" name="titulo"
                     value="{{ old('titulo'), $post->titulo}}" required></label>
-            @error('titulo')
+            @error('Titulo')
             <br>
             <small class="text-danger">*{{$message}}</small>
             <br>
@@ -30,7 +30,7 @@
         <div class="form-group m-2">
             <label>@lang('Extracto')<br> <input class="form-control" type="text" name="extracto"
                     value="{{ old('extracto'), $post->extracto}}" required></label>
-            @error('extracto')
+            @error('Extracto')
             <br>
             <small class="text-danger">*{{$message}}</small>
             <br>
@@ -40,7 +40,7 @@
         <div class="form-group m-2">
             <label>@lang('Contenido')<br> <input class="form-control" type="text" name="contenido"
                     value="{{ old('contenido'), $post->contenido}}" required></label>
-            @error('contenido')
+            @error('Contenido')
             <br>
             <small class="text-danger">*{{$message}}</small>
             <br>
@@ -54,7 +54,7 @@
             <input type="checkbox" name="caducable" {{ old('caducable')==='true' ? 'checked=' .'"checked"' : ''
                 }}>
 
-            @error('caducable')
+            @error('Caducable')
             <br>
             <small class="text-danger">*{{$message}}</small>
             <br>
@@ -67,7 +67,7 @@
             <input type="checkbox" name="comentable" {{ old('comentable')==='true' ? 'checked=' .'"checked"'
                 : '' }}>
 
-            @error('comentable')
+            @error('Comentable')
             <br>
             <small class="text-danger">*{{$message}}</small>
             <br>

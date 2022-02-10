@@ -43,7 +43,25 @@
                     @endauth
                 </div>
             </div>
-        </div>
+
+            <div class="row" style="text-align: center;margin-top: 40px;">
+                <div class="text-right m-3">
+                    <select class="form-select p-3" name="language" style="width: 10%;">
+                        <option value="en" {{ Session::get('language') == 'en' ? 'selected' : '' }}>English</option>
+                        <option value="es" {{ Session::get('language') == 'es' ? 'selected' : '' }}>Spanish</option>
+                    </select>
+                </div>
+            </div>
+        
+                <script type="text/javascript">
+                $(document).ready(function() {
+                    $('select[name=language]').change(function() {
+                        var lang = $(this).val();
+                        window.location.href = "{{ route('changeLanguage') }}?language="+lang;
+                    });
+                });
+            </script>
+            </div>
         </header>
 
         </div>
