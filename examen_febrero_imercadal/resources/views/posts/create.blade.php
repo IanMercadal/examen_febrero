@@ -1,7 +1,7 @@
 @extends('layouts.plantilla')
 
 @section('title','Create')
-
+  
 @section('content')
 <h2 class="text-center">Crear post</h2>
 <div class="continer d-flex justify-content-center">
