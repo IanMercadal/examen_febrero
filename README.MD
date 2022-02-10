@@ -1,6 +1,13 @@
 # README
+Pagina para visitar la web:
+- http://imercadal.ifc33b.cifpfbmoll.eu/examen_febrero/examen_febrero_imercadal/public/
+Usuarios
+
+ian@ian.es - 12345678
+user@user.es - 12345678
 
 ## COMMITS
+Algunos commits contenian puntos posteriores al que se publica, esto es debido al orden ejcutado
 
 ## .ENV
 
