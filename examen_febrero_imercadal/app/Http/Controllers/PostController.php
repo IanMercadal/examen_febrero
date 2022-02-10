@@ -12,9 +12,10 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $posts = Post::all();
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -22,9 +23,9 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Post $post)
     {
-        //
+        return view('posts.create', compact('post'));
     }
 
     /**
@@ -35,7 +36,10 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = (new post)->fill($request->all() );
+
+        $post->save();
+        return redirect()->route('posts.index', $post);
     }
 
     /**
