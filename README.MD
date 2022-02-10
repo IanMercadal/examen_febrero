@@ -1,6 +1,8 @@
 # README
 Pagina para visitar la web:
 - http://imercadal.ifc33b.cifpfbmoll.eu/examen_febrero/examen_febrero_imercadal/public/
+Una vez Logeado: 
+- http://imercadal.ifc33b.cifpfbmoll.eu/examen_febrero/examen_febrero_imercadal/public/posts
 Usuarios
 
 ian@ian.es - 12345678
