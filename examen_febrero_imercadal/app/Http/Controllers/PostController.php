@@ -37,6 +37,7 @@ class PostController extends Controller
      */
     public function store(StoreRequest $request)
     {
+        // Controllador store creado
         $post = (new post)->fill($request->all() );
 
         $post->save();
